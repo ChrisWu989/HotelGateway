@@ -28,7 +28,7 @@ public class Hotel {
 	private String email;
 	private String mobile;
 	private String imageURL;	
-	private int timesBooked;
+	private Integer timesBooked;
 	
 	@OneToMany
 	private Set<HotelRoom> hotelRooms = new HashSet<>();
@@ -42,7 +42,7 @@ public class Hotel {
 	
 	public Hotel(int hotelId, String hotelName, String address, String city, String state, int starRating,
 			double averagePrice, Set<Amenities> amenities, double discount, String description, String email,
-			String mobile, String imageURL, int timesBooked, Set<HotelRoom> hotelRooms, Set<String> hotelAmenityNames) {
+			String mobile, String imageURL, Integer timesBooked, Set<HotelRoom> hotelRooms, Set<String> hotelAmenityNames) {
 		super();
 		this.hotelId = hotelId;
 		this.hotelName = hotelName;
@@ -78,10 +78,10 @@ public class Hotel {
 		this.state = state;
 	}
 
-	public int getTimesBooked() {
+	public Integer getTimesBooked() {
 		return timesBooked;
 	}
-	public void setTimesBooked(int timesBooked) {
+	public void setTimesBooked(Integer timesBooked) {
 		this.timesBooked = timesBooked;
 	}
 	public Set<HotelRoom> getHotelRooms() {
